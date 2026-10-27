@@ -1,3 +1,7 @@
+> **Acompanhamento da entrega:** [enunciado extraído da plataforma](ENUNCIADO.md), [issues locais e retomada](ISSUES.md) e [orientações de colaboração](AGENTS.md).
+>
+> Ferramenta escolhida: Codex. Preparação inicial em andamento; a análise manual e a criação da skill ainda não começaram. O texto abaixo foi fornecido pelo repositório base e será substituído gradualmente pela documentação da entrega. Para requisitos atualizados, usamos a extração da plataforma em `ENUNCIADO.md`.
+
 # Criação de Skills — Refatoração Arquitetural Automatizada
 
 Ao longo do curso você aprendeu o que são Skills e como elas permitem que um agente de IA atue como um especialista em tarefas específicas. Agora imagine o seguinte cenário: você herdou 3 projetos legados com problemas de arquitetura, segurança e qualidade de código. Revisar e corrigir tudo manualmente levaria dias.
