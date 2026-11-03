@@ -1,0 +1,238 @@
+TAP version 13
+# Subtest: checkout aprovado preserva resposta e grava todas as etapas
+ok 1 - checkout aprovado preserva resposta e grava todas as etapas
+  ---
+  duration_ms: 190.363917
+  type: 'test'
+  ...
+# Subtest: pagamento recusado não cria usuário nem registros parciais
+ok 2 - pagamento recusado não cria usuário nem registros parciais
+  ---
+  duration_ms: 40.816625
+  type: 'test'
+  ...
+# Subtest: email existente exige senha correta
+ok 3 - email existente exige senha correta
+  ---
+  duration_ms: 110.001
+  type: 'test'
+  ...
+# Subtest: entrada inválida: sem senha não grava
+ok 4 - entrada inválida: sem senha não grava
+  ---
+  duration_ms: 37.261417
+  type: 'test'
+  ...
+# Subtest: entrada inválida: senha numérica não grava
+ok 5 - entrada inválida: senha numérica não grava
+  ---
+  duration_ms: 37.153792
+  type: 'test'
+  ...
+# Subtest: entrada inválida: cartão numérico não grava
+ok 6 - entrada inválida: cartão numérico não grava
+  ---
+  duration_ms: 34.810792
+  type: 'test'
+  ...
+# Subtest: entrada inválida: email objeto não grava
+ok 7 - entrada inválida: email objeto não grava
+  ---
+  duration_ms: 34.795208
+  type: 'test'
+  ...
+# Subtest: entrada inválida: nome vazio não grava
+ok 8 - entrada inválida: nome vazio não grava
+  ---
+  duration_ms: 36.623375
+  type: 'test'
+  ...
+# Subtest: entrada inválida: ID inválido não grava
+ok 9 - entrada inválida: ID inválido não grava
+  ---
+  duration_ms: 35.278542
+  type: 'test'
+  ...
+# Subtest: entrada inválida: ID não positivo não grava
+ok 10 - entrada inválida: ID não positivo não grava
+  ---
+  duration_ms: 35.250916
+  type: 'test'
+  ...
+# Subtest: entrada inválida: corpo nulo não grava
+ok 11 - entrada inválida: corpo nulo não grava
+  ---
+  duration_ms: 36.798292
+  type: 'test'
+  ...
+# Subtest: curso 3 indisponível mantém banco
+ok 12 - curso 3 indisponível mantém banco
+  ---
+  duration_ms: 34.811458
+  type: 'test'
+  ...
+# Subtest: curso 999 indisponível mantém banco
+ok 13 - curso 999 indisponível mantém banco
+  ---
+  duration_ms: 34.569916
+  type: 'test'
+  ...
+# Subtest: logs e respostas não contêm cartão, senha nem token
+ok 14 - logs e respostas não contêm cartão, senha nem token
+  ---
+  duration_ms: 65.907333
+  type: 'test'
+  ...
+# Subtest: falha em users desfaz checkout inteiro
+ok 15 - falha em users desfaz checkout inteiro
+  ---
+  duration_ms: 101.363709
+  type: 'test'
+  ...
+# Subtest: falha em enrollments desfaz checkout inteiro
+ok 16 - falha em enrollments desfaz checkout inteiro
+  ---
+  duration_ms: 99.926417
+  type: 'test'
+  ...
+# Subtest: falha em payments desfaz checkout inteiro
+ok 17 - falha em payments desfaz checkout inteiro
+  ---
+  duration_ms: 100.338833
+  type: 'test'
+  ...
+# Subtest: falha em audit_logs desfaz checkout inteiro
+ok 18 - falha em audit_logs desfaz checkout inteiro
+  ---
+  duration_ms: 100.477667
+  type: 'test'
+  ...
+# Subtest: relatório e exclusão rejeitam credenciais ausentes ou inválidas
+ok 19 - relatório e exclusão rejeitam credenciais ausentes ou inválidas
+  ---
+  duration_ms: 37.46225
+  type: 'test'
+  ...
+# Subtest: relatório autorizado preserva receitas, alunos e cursos vazios
+ok 20 - relatório autorizado preserva receitas, alunos e cursos vazios
+  ---
+  duration_ms: 73.990791
+  type: 'test'
+  ...
+# Subtest: exclusão autorizada sem vínculos remove usuário
+ok 21 - exclusão autorizada sem vínculos remove usuário
+  ---
+  duration_ms: 34.584625
+  type: 'test'
+  ...
+# Subtest: exclusão vinculada recebe 409 e preserva histórico
+ok 22 - exclusão vinculada recebe 409 e preserva histórico
+  ---
+  duration_ms: 33.457
+  type: 'test'
+  ...
+# Subtest: exclusão 999 retorna 404
+ok 23 - exclusão 999 retorna 404
+  ---
+  duration_ms: 34.290042
+  type: 'test'
+  ...
+# Subtest: exclusão no retorna 400
+ok 24 - exclusão no retorna 400
+  ---
+  duration_ms: 33.034417
+  type: 'test'
+  ...
+# Subtest: exclusão 0 retorna 400
+ok 25 - exclusão 0 retorna 400
+  ---
+  duration_ms: 34.248416
+  type: 'test'
+  ...
+# Subtest: exclusão 1.5 retorna 400
+ok 26 - exclusão 1.5 retorna 400
+  ---
+  duration_ms: 33.381542
+  type: 'test'
+  ...
+# Subtest: checkouts concorrentes não misturam rollback e commit
+ok 27 - checkouts concorrentes não misturam rollback e commit
+  ---
+  duration_ms: 100.990083
+  type: 'test'
+  ...
+# Subtest: mesmo email concorrente cria um usuário e verifica senha
+ok 28 - mesmo email concorrente cria um usuário e verifica senha
+  ---
+  duration_ms: 99.696791
+  type: 'test'
+  ...
+# Subtest: erro de consulta não vira 404 ou relatório parcial
+ok 29 - erro de consulta não vira 404 ou relatório parcial
+  ---
+  duration_ms: 34.233959
+  type: 'test'
+  ...
+# Subtest: número de consultas do relatório não cresce por matrícula
+ok 30 - número de consultas do relatório não cresce por matrícula
+  ---
+  duration_ms: 36.632209
+  type: 'test'
+  ...
+# Subtest: aplicações não compartilham banco ou cache
+ok 31 - aplicações não compartilham banco ou cache
+  ---
+  duration_ms: 98.729875
+  type: 'test'
+  ...
+# Subtest: ID com codificação inválida recebe 400 sanitizado
+ok 32 - ID com codificação inválida recebe 400 sanitizado
+  ---
+  duration_ms: 34.39325
+  type: 'test'
+  ...
+# Subtest: senhas com prefixo igual não colidem e possuem salt próprio
+ok 33 - senhas com prefixo igual não colidem e possuem salt próprio
+  ---
+  duration_ms: 177.671
+  type: 'test'
+  ...
+# Subtest: senhas legadas e formatos corrompidos não autenticam
+ok 34 - senhas legadas e formatos corrompidos não autenticam
+  ---
+  duration_ms: 0.214208
+  type: 'test'
+  ...
+# Subtest: configuração rejeita token ausente, fraco e porta inválida
+ok 35 - configuração rejeita token ausente, fraco e porta inválida
+  ---
+  duration_ms: 0.552875
+  type: 'test'
+  ...
+# Subtest: importar app não inicia servidor nem banco
+ok 36 - importar app não inicia servidor nem banco
+  ---
+  duration_ms: 79.47425
+  type: 'test'
+  ...
+# Subtest: boot sem token falha sem revelar configuração
+ok 37 - boot sem token falha sem revelar configuração
+  ---
+  duration_ms: 73.931458
+  type: 'test'
+  ...
+# Subtest: processo real inicia, atende endpoints e encerra limpo
+ok 38 - processo real inicia, atende endpoints e encerra limpo
+  ---
+  duration_ms: 188.429792
+  type: 'test'
+  ...
+1..38
+# tests 38
+# suites 0
+# pass 38
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1939.908792

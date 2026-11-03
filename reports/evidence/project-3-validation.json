@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-03",
+  "unit_tests": 32,
+  "http_checks_before": 24,
+  "http_checks_after": 24,
+  "original_method_paths": 22,
+  "http_status_lists_identical": true,
+  "process_health_status": 200,
+  "processes_terminated": true,
+  "isolation": "cópia temporária com sandbox-exec; testes em SQLite em memória; HTTP em SQLite sintético; rede externa bloqueada",
+  "original_database_sha256_before_after": "c5e5246deddcff8a33646a2311bb344ecdecdc627e488fdc5ffca1a39fc93b1f",
+  "limitations": [
+    "SMTP real não exercitado",
+    "dados antigos não migrados",
+    "não é restauração exata dos dados perdidos",
+    "revisão por leitura não prova ausência de falhas"
+  ]
+}

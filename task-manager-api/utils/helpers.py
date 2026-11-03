@@ -1,10 +1,6 @@
+from utils.time_utils import utc_now
 from datetime import datetime
 import re
-import os
-import json
-import sys
-import math
-import hashlib
 
 def format_date(date_obj):
     if date_obj:
@@ -35,7 +31,7 @@ def generate_id():
 
 def log_action(action, details=None):
 
-    timestamp = datetime.utcnow()
+    timestamp = utc_now()
     print(f"[{timestamp}] ACTION: {action}")
     if details:
         print(f"  DETAILS: {details}")
@@ -114,3 +110,4 @@ MIN_TITLE_LENGTH = 3
 MIN_PASSWORD_LENGTH = 4
 DEFAULT_PRIORITY = 3
 DEFAULT_COLOR = '#000000'
+MAX_DATABASE_INTEGER = (1 << 63) - 1

@@ -1,0 +1,79 @@
+{
+  "issue": "009",
+  "date": "2026-10-29",
+  "base_revision": "478f362d9de8969ec41905b9dd9c5077a478daf0",
+  "branch": "refactor/issue-009-project-1",
+  "runtime": "Python 3.13.7",
+  "sqlite_runtime": "3.53.4",
+  "original_source_sha256": {
+    "app.py": "2ce0981b36199939d2100e8d788a6081637e70932e07abf61da309bfb655323c",
+    "controllers.py": "41542c293ad5b21dbcb6cb1154d068dbe35aad55e6879f6fb7fc0d72217b1b4f",
+    "models.py": "6832a37cc4fe8632c40b5580bb3e835bc9eafc0ab1ba4249c016fbe0e7fe9345",
+    "database.py": "cb15ddec38ed506fd2655960deb4f8cad5b830846cd5e987fb28a6c633bf8707",
+    "requirements.txt": "4b1fc5a5d5023771e4d7ae312687cd2c98f3331b2497f5c82053672964fa9835"
+  },
+  "audit": {
+    "files": 4,
+    "physical_lines": 780,
+    "endpoints": 19,
+    "manual_matches": 9,
+    "findings": 13
+  },
+  "initial_red": {
+    "test_methods": 23,
+    "assertion_or_subtest_failures": 49,
+    "errors": 1,
+    "error_note": "Original shared connection retained a write transaction; DROP TRIGGER in independent connection was locked."
+  },
+  "refined_rollback_before": {
+    "test_methods": 1,
+    "failures": 1,
+    "observed": "Original failed order was persisted by subsequent user registration commit."
+  },
+  "final_suite": {
+    "command": ".venv/bin/python -B -W error::ResourceWarning -m unittest discover -s tests -v",
+    "tests": 41,
+    "failures": 0,
+    "errors": 0,
+    "resource_warnings": 0
+  },
+  "http": {
+    "before": 19,
+    "after": 19,
+    "transport": "HTTP via loopback ephemeral port, subprocess Werkzeug server",
+    "persistence": "SQLite connections independent from application",
+    "processes": "terminated and reaped",
+    "data": "synthetic temporary databases removed"
+  },
+  "queries": {
+    "orders": [
+      0,
+      1,
+      10
+    ],
+    "items_per_order": 5,
+    "model_selects": [
+      2,
+      2,
+      2
+    ],
+    "filtered_and_unfiltered": true,
+    "protected_endpoint_identity_query_additional": 1
+  },
+  "review": {
+    "independent": true,
+    "fixed": [
+      "duplicate-email login regression",
+      "nonfinite monetary total",
+      "finite large-int SQLite binding"
+    ],
+    "reviewer_http_limit": "Sandbox denied bind; root HTTP execution separately verified"
+  },
+  "limits": [
+    "No production deployment, load test or broad security certification",
+    "No real database migration or reset",
+    "Admin SQL intentionally retained behind admin, CSRF and opt-in flag",
+    "Legacy migration requires an offline fully plaintext database",
+    "Projects 2/3 and automatic T3 discovery not validated"
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "revision": "769ee59bdf72c051197ba85d6ff14cd4b3997d6a",
+  "mode": "original sources loaded with vm; synthetic fixtures; real loopback HTTP; SQLite :memory:",
+  "scenarios": [
+    {
+      "name": "checkout-approved",
+      "status": 200,
+      "before": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "after": {
+        "users": 3,
+        "enrollments": 2,
+        "payments": 2,
+        "audit_logs": 1
+      },
+      "cardInLogs": true
+    },
+    {
+      "name": "checkout-denied",
+      "status": 400,
+      "before": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "after": {
+        "users": 3,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "cardInLogs": true
+    },
+    {
+      "name": "checkout-wrong-password",
+      "status": 200,
+      "before": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "after": {
+        "users": 2,
+        "enrollments": 2,
+        "payments": 2,
+        "audit_logs": 1
+      },
+      "cardInLogs": true
+    },
+    {
+      "name": "report-without-auth",
+      "status": 200,
+      "before": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "after": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "cardInLogs": false
+    },
+    {
+      "name": "delete-linked-without-auth",
+      "status": 200,
+      "before": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "after": {
+        "users": 1,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "cardInLogs": false
+    },
+    {
+      "name": "delete-unlinked",
+      "status": 200,
+      "before": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "after": {
+        "users": 1,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "cardInLogs": false
+    },
+    {
+      "name": "delete-absent",
+      "status": 200,
+      "before": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "after": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "cardInLogs": false
+    },
+    {
+      "name": "payment-write-failure",
+      "status": 500,
+      "before": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "after": {
+        "users": 3,
+        "enrollments": 2,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "cardInLogs": true
+    },
+    {
+      "name": "audit-write-failure",
+      "status": 200,
+      "before": {
+        "users": 2,
+        "enrollments": 1,
+        "payments": 1,
+        "audit_logs": 0
+      },
+      "after": {
+        "users": 3,
+        "enrollments": 2,
+        "payments": 2,
+        "audit_logs": 0
+      },
+      "cardInLogs": true
+    }
+  ],
+  "resourcesClosed": true
+}

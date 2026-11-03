@@ -1,0 +1,39 @@
+Origem e banco em memória confirmados na cópia isolada
+test_all_original_endpoints_and_persistence (test_security.SecurityTests.test_all_original_endpoints_and_persistence) ... ok
+test_bootstrap_admin_requires_credentials_and_never_replaces_existing_admin (test_security.SecurityTests.test_bootstrap_admin_requires_credentials_and_never_replaces_existing_admin) ... ok
+test_category_and_user_lists_do_not_query_per_row (test_security.SecurityTests.test_category_and_user_lists_do_not_query_per_row) ... ok
+test_category_counts_are_scoped_for_regular_users (test_security.SecurityTests.test_category_counts_are_scoped_for_regular_users) ... ok
+test_category_invalid_body_is_a_client_error (test_security.SecurityTests.test_category_invalid_body_is_a_client_error) ... ok
+test_category_nullable_description_can_be_cleared (test_security.SecurityTests.test_category_nullable_description_can_be_cleared) ... ok
+test_configuration_uses_environment (test_security.SecurityTests.test_configuration_uses_environment) ... ok
+test_detail_avoids_legacy_query_get (test_security.SecurityTests.test_detail_avoids_legacy_query_get) ... ok
+test_head_respects_user_resource_permissions (test_security.SecurityTests.test_head_respects_user_resource_permissions) ... ok
+test_import_does_not_create_database (test_security.SecurityTests.test_import_does_not_create_database) ... ok
+test_invalid_container_field_types_return_400 (test_security.SecurityTests.test_invalid_container_field_types_return_400) ... ok
+test_invalid_json_body_and_password_types_are_client_errors (test_security.SecurityTests.test_invalid_json_body_and_password_types_are_client_errors) ... ok
+test_invalid_search_filter_is_a_client_error (test_security.SecurityTests.test_invalid_search_filter_is_a_client_error) ... ok
+test_invalid_task_fields_do_not_modify_data (test_security.SecurityTests.test_invalid_task_fields_do_not_modify_data) ... ok
+test_invalid_task_priority_is_a_client_error (test_security.SecurityTests.test_invalid_task_priority_is_a_client_error) ... ok
+test_invalid_token_rejected_and_admin_can_access_users (test_security.SecurityTests.test_invalid_token_rejected_and_admin_can_access_users) ... ok
+test_legacy_login_migrates_hash_and_hides_password (test_security.SecurityTests.test_legacy_login_migrates_hash_and_hides_password) ... ok
+test_manager_can_read_but_not_write_administrative_data (test_security.SecurityTests.test_manager_can_read_but_not_write_administrative_data) ... ok
+test_old_token_does_not_authenticate_recreated_account_with_same_id (test_security.SecurityTests.test_old_token_does_not_authenticate_recreated_account_with_same_id) ... ok
+test_overdue_rule_avoids_deprecated_datetime (test_security.SecurityTests.test_overdue_rule_avoids_deprecated_datetime) ... ok
+test_password_change_revokes_existing_token (test_security.SecurityTests.test_password_change_revokes_existing_token) ... ok
+test_protected_users_require_authentication (test_security.SecurityTests.test_protected_users_require_authentication) ... ok
+test_public_registration_is_independent_of_bearer_header (test_security.SecurityTests.test_public_registration_is_independent_of_bearer_header) ... ok
+test_registration_cannot_assign_admin_role (test_security.SecurityTests.test_registration_cannot_assign_admin_role) ... ok
+test_smtp_credentials_are_not_hardcoded (test_security.SecurityTests.test_smtp_credentials_are_not_hardcoded) ... ok
+test_task_domain_rejects_invalid_priority_without_http (test_security.SecurityTests.test_task_domain_rejects_invalid_priority_without_http) ... ok
+test_test_setup_refuses_file_database_even_with_flag (test_security.SecurityTests.test_test_setup_refuses_file_database_even_with_flag) ... ok
+test_unexpected_error_is_generic_and_rolls_back (test_security.SecurityTests.test_unexpected_error_is_generic_and_rolls_back) ... [2026-11-03 10:44:58,627] ERROR in app: Falha interna ao processar requisição
+ok
+test_user_cannot_access_other_user_or_elevate_role (test_security.SecurityTests.test_user_cannot_access_other_user_or_elevate_role) ... ok
+test_user_cannot_read_or_reassign_another_users_task (test_security.SecurityTests.test_user_cannot_read_or_reassign_another_users_task) ... ok
+test_user_domain_rejects_invalid_email_without_http (test_security.SecurityTests.test_user_domain_rejects_invalid_email_without_http) ... ok
+test_user_task_list_and_search_are_scoped (test_security.SecurityTests.test_user_task_list_and_search_are_scoped) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 10.359s
+
+OK

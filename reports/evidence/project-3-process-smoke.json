@@ -1,0 +1,6 @@
+{
+  "status": 200,
+  "health": "ok",
+  "process_exit": "SIGTERM (encerrado após verificação)",
+  "environment": "cópia temporária, acesso ao projeto e rede externa bloqueados"
+}

@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-29",
+  "baselineRevision": "769ee59bdf72c051197ba85d6ff14cd4b3997d6a",
+  "branch": "refactor/issue-010-project-2",
+  "node": "v24.20.0",
+  "tests": {
+    "command": "node --test --test-reporter=tap tests/*.test.js",
+    "passed": 38,
+    "failed": 0,
+    "skipped": 0
+  },
+  "baselineScenarios": 9,
+  "afterScenarios": 11,
+  "originalEndpointsPreserved": 3,
+  "sourceFilesBefore": 3,
+  "sourceFilesAfter": 19,
+  "skillFiles": 6,
+  "skillMatchesProject1": true,
+  "realDataOrExternalIntegrationsUsed": false,
+  "testResourcesClosed": true,
+  "independentReview": "URIError400->500 reproduced and fixed; no other Critical/Important identified",
+  "sourceSha256": {
+    "src/app.js": "c82adf802f2fc21d7ff89449ca967982ac945d42ca01cacf07699d3abfa9ec20",
+    "src/config/index.js": "c67258c0b3b18af0e6bdd2142eb0e01af2fdc18db166c87d2a41215b72479d40",
+    "src/controllers/admin.js": "ffb1309da3c3add1df5555af71db93458a664c133e8baabdc17c80933e1f80af",
+    "src/controllers/checkout.js": "c5b943d0c70aa85581af8b7ee5ad10122933a762400ece664e0cdce09747e26f",
+    "src/controllers/validation.js": "8471fe8db7bbc688bd1a54dc74d335adb508894eece047d0cdd09c25f2629913",
+    "src/database/connection.js": "41010cf54f943424bad36909f86c2b97c4df603041abbdd3646e65fab5e83e16",
+    "src/database/demo.js": "3f2b62b803ba341b6163333bbaeae7c11abce2677c968bc63e3d1ca56a48c6f9",
+    "src/database/schema.js": "6be6eac5f1ec909fad0efe7361fc89bb7ffd0c50facb12ac45b791f8ea83c95e",
+    "src/middleware/admin.js": "d9e57f013ff75ec21a197119b13dbedbfd7b4f4876ea66710609f2a2a826c9e3",
+    "src/middleware/errors.js": "85ca4cf88279493c9434992fce024ad06187855e44610ea616cab8fc150bf6ad",
+    "src/models/courses.js": "33a8fd96ba0488182bb744ea1845a2ceb53736fae5d0bc0f470f414facb9e534",
+    "src/models/enrollments.js": "0b3738fb8aef1baae8005786694d653cc702f1640bd88b26501ec824942faae4",
+    "src/models/financial-report.js": "9683155581790582ef81f800be70ac1ef662b932dcd676db82d5022c50a96c2e",
+    "src/models/users.js": "493b10ec5bd0afc20df0c7853f2b8f829485f253aedd8cc55be97b20fa7a5ed3",
+    "src/presenters/responses.js": "e1e2551b38d5af2bcd9c66154014cd8c002cd8b7b21f419b3ca4e2565566727f",
+    "src/routes/index.js": "c36c883bf3a19d430c4feaae3454c2c28d38785218fc5136a36f0be99ce75858",
+    "src/security/passwords.js": "8dd42d7d4e01bcf618fe08fefb35238ff33809aa7dff1fa9e3d1636715b56f96",
+    "src/server.js": "60ac0d0d1b36cce970e1f59321c2072c310154989c63c78ee2cdd49130e4b214",
+    "src/services/checkout.js": "1b2af64939fd4083c337d587f7ef0a9d4a0d6d4c065b1f6cba5dd52f8f3f1adf"
+  },
+  "evidenceSha256": {
+    "reports/evidence/project-2-http-after.json": "9809143a1b99aabddb201d13f5e98add263eb78bd2de57041449172ee1ab75c6",
+    "reports/evidence/project-2-http-before.json": "1e4d2fc2d2564efac11ddd38909d716c0279cda0a168769dd6a1931ba62fec5a",
+    "reports/evidence/project-2-process-smoke.json": "8b2e43fed605d13477613175f4e049d9ecb6da33f1cf757b05f44993e02d0906",
+    "reports/evidence/project-2-tests.tap": "dd98a0734ab64323ef264a8d8afaaf5e73b8da427350aaa609dbc74e83657085"
+  },
+  "limitations": [
+    "in-memory storage only",
+    "no production/load or transitive vulnerability audit",
+    "legacy password reset and external integrations outside scope",
+    "automatic skill discovery not tested"
+  ]
+}

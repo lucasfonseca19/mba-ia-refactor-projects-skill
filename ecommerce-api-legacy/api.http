@@ -1,31 +1,35 @@
-@baseUrl = http://localhost:3000
+@baseUrl = http://127.0.0.1:3000
+@adminToken = {{$processEnv ADMIN_API_TOKEN}}
+@demoPassword = {{$processEnv DEMO_PASSWORD}}
 
-### Checkout - sucesso
+### Inicie com SEED_DEMO=1 e DEMO_PASSWORD definida. Somente dados sintéticos.
 POST {{baseUrl}}/api/checkout
 Content-Type: application/json
 
 {
-  "usr": "Guilherme",
-  "eml": "gui@fullcycle.com.br",
-  "pwd": "senhaforte",
+  "usr": "Aluno Teste",
+  "eml": "new@example.test",
+  "pwd": "{{demoPassword}}",
   "c_id": 2,
-  "card": "4111222233334444"
+  "card": "4000000000000000"
 }
 
-### Checkout - pagamento recusado
+### Pagamento recusado: 400, sem novos registros
 POST {{baseUrl}}/api/checkout
 Content-Type: application/json
 
 {
-  "usr": "João",
-  "eml": "joao@teste.com",
-  "pwd": "123",
+  "usr": "Aluno Recusado",
+  "eml": "denied@example.test",
+  "pwd": "{{demoPassword}}",
   "c_id": 1,
-  "card": "5111222233334444"
+  "card": "5000000000000000"
 }
 
-### Relatório financeiro administrativo
+### Relatório financeiro: credencial administrativa obrigatória
 GET {{baseUrl}}/api/admin/financial-report
+Authorization: Bearer {{adminToken}}
 
-### Deletar usuário
+### Usuário demo possui matrícula: retorna 409 e preserva histórico
 DELETE {{baseUrl}}/api/users/1
+Authorization: Bearer {{adminToken}}

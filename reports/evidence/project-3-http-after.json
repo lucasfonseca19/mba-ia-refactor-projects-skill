@@ -1,0 +1,125 @@
+{
+  "checks": 24,
+  "cases": [
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/users",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/users/1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/users/1/tasks",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/tasks",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/tasks/1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/tasks/search?q=inicial",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/tasks/stats",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/reports/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/reports/user/1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/categories",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/users",
+      "status": 201
+    },
+    {
+      "method": "PUT",
+      "path": "/users/2",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/categories",
+      "status": 201
+    },
+    {
+      "method": "PUT",
+      "path": "/categories/2",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/tasks",
+      "status": 201
+    },
+    {
+      "method": "PUT",
+      "path": "/tasks/2",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/tasks/2",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/tasks/2",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/categories/2",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/users/2",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/tasks/2",
+      "status": 404
+    }
+  ]
+}

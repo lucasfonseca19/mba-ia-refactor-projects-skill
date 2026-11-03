@@ -1,0 +1,14 @@
+{
+  "boot": true,
+  "host": "127.0.0.1",
+  "ephemeralPort": true,
+  "reportStatus": 200,
+  "initialRevenue": 997,
+  "checkoutStatus": 200,
+  "deleteLinkedStatus": 409,
+  "logsSanitized": true,
+  "stderrEmpty": true,
+  "exitCode": 0,
+  "signal": null,
+  "processClosed": true
+}

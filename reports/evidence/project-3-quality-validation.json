@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-03",
+  "issue": "012",
+  "base_revision": "35494b66fc6fdd62f68d5b4eae4bf4e63ea51472",
+  "command": "task-manager-api/tests/run_sandbox_macos.sh",
+  "isolation": {
+    "temporary_copy": true,
+    "original_project_and_home_denied": true,
+    "external_network_denied": true,
+    "sqlite": "memory",
+    "barrier_checked_before_import": true
+  },
+  "baseline": {
+    "tests": 32,
+    "failures": 0,
+    "login_list_already_rejected": true
+  },
+  "red": {
+    "tests": 35,
+    "assertion_failures": 24,
+    "error": "500 instead of 400 for out-of-range task references, numeric search filters and resource IDs"
+  },
+  "green": {
+    "tests": 38,
+    "failures": 0,
+    "errors": 0
+  },
+  "login_diagnosis_correction": "The isolated function experiment bypassed require_identity; the complete API already returns 400 for non-object JSON. No login implementation change was necessary.",
+  "f08_status": "resolved for the identified body/type/filter mechanisms and tested numeric boundaries; no exhaustive validation claim",
+  "original_database_sha256_before": "c5e5246deddcff8a33646a2311bb344ecdecdc627e488fdc5ffca1a39fc93b1f",
+  "original_database_sha256_after": "c5e5246deddcff8a33646a2311bb344ecdecdc627e488fdc5ffca1a39fc93b1f",
+  "source_sha256": {
+    "task-manager-api/middleware/access_control.py": "c28235a132fe9db52dc4dcaf75732151b42f88f90f29659065b9296733308575",
+    "task-manager-api/services/task_service.py": "138acb6b5af59a7da032c53bf755cc4011b12ccb72db7e2903da3fb3f489e851",
+    "task-manager-api/utils/helpers.py": "b29cdc1571fae9073923455ec95c15c3c3f5c8fb835de49943e01c0c6e4fdeca",
+    "task-manager-api/tests/test_security.py": "3c590f64f54ede2653fb41c60833ea308653981432ea9501acd7a9b532995472"
+  },
+  "limitations": [
+    "Flask test client integration, not new real HTTP evidence",
+    "Historical HTTP and boot artifacts remain separate",
+    "No SMTP, real-data migration, production or universal security verification",
+    "Report expansion is retrospective, not a recreated original approval conversation",
+    "Log RED sanitizado para publicação: caminho temporário da cópia substituído por marcador."
+  ],
+  "evidence_sha256": {
+    "reports/evidence/project-3-quality-baseline.log": "ef2fcf04e26d0fbbe3b27147d2618efd6ba3c5951989c07aff3b3ec74ad8984f",
+    "reports/evidence/project-3-quality-red.log": "40cc8d4e1b3c97f7f79a35fb3279fe7cdd60ca4af9b0261dcbd83297d9a25bc1",
+    "reports/evidence/project-3-quality-green.log": "5024b12c01bb6d12b62c10316cb1fbc2457db627b62cf454daf07042bf0d47ca"
+  }
+}

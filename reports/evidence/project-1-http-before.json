@@ -1,0 +1,106 @@
+{
+  "mode": "before",
+  "boot": "ok",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/produtos",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/produtos/busca?q=Produto&categoria=geral&preco_min=10&preco_max=30",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/produtos/1",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/produtos",
+      "status": 201
+    },
+    {
+      "method": "PUT",
+      "path": "/produtos/11",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/produtos/11",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/usuarios",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/usuarios/2",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/usuarios",
+      "status": 201
+    },
+    {
+      "method": "POST",
+      "path": "/pedidos",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/pedidos",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/pedidos/usuario/2",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/pedidos/1/status",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/relatorios/vendas",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/admin/query",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/admin/reset-db",
+      "status": 200
+    }
+  ],
+  "persistence": "verified via independent SQLite connections",
+  "health_secret_exposed": true,
+  "user_password_exposed": true,
+  "server_shutdown": "terminated and reaped in finally",
+  "database": "temporary, removed on exit"
+}
