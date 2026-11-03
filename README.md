@@ -269,7 +269,7 @@ A seleção cobre segurança, arquitetura, integridade, performance e manutenç�
 
 Na criação, passaram o validador de frontmatter, a resolução dos 21 links/âncoras internos, a análise sintática dos 24 blocos de código e verificações isoladas dos mecanismos das doze transformações, com dados sintéticos. Os exemplos de autorização e propagação de erros usaram substitutos das dependências; não representam teste integrado de uma aplicação.
 
-As issues 009, 010 e 011 registram a aplicação das três fases, com pausa e aprovação humana posterior antes das refatorações. Os resultados estão consolidados abaixo. A conferência da issue 012 confirmou igualdade dos seis arquivos nas três cópias; não repetiu as suítes. Descoberta automática no T3 e funcionamento universal permanecem não demonstrados.
+As issues 009, 010 e 011 registram a aplicação das três fases, com pausa e aprovação humana posterior antes das refatorações. Os resultados estão consolidados abaixo. A conferência da issue 012 confirmou igualdade dos seis arquivos nas três cópias; não repetiu as suítes. O funcionamento em outras tecnologias permanece não demonstrado.
 
 ### Desafios e iteração após o incidente no Projeto 3
 
@@ -367,7 +367,7 @@ A mesma skill usada em Flask no Projeto 1 foi copiada sem ajustes para Node/Expr
 - **Projeto 1:** SQL administrativo foi preservado por decisão aprovada, atrás de admin, CSRF e opt-in. Continua permitindo SQL irrestrito ao administrador confiável. Nenhum banco real foi migrado/resetado. Migração de senhas exige base offline integralmente em texto puro; não há inferência para bases mistas.
 - **Projeto 2:** SQLite é somente em memória; reinício perde os dados. Gateway é simulado, sem cobrança/email real. Senhas legadas exigiriam reset próprio; token administrativo compartilhado e fila local não constituem operação de produção. Carga, persistência e auditoria de vulnerabilidades transitivas ficaram fora do escopo.
 - **Projeto 3:** F-08 foi ampliado e resolvido no escopo identificado de corpo, tipos, filtros e fronteiras numéricas, com testes RED→GREEN na issue 012; cobertura exaustiva não demonstrada. Contas MD5 sem novo login continuam legadas. SMTP real e migração de dados existentes não foram exercitados. UTC naive foi preservado para compatibilidade. Mesmos status HTTP não provam equivalência integral, e o incidente/recriação dos exemplos permanece parte do resultado.
-- **Geral:** não há benchmark de latência, deploy ou prova de ausência de falhas. A redução de consultas mede quantidade de acessos, não tempo de resposta. Descoberta automática no T3 e comportamento em tecnologias além das duas stacks fornecidas não foram comprovados.
+- **Geral:** não há benchmark de latência, deploy ou prova de ausência de falhas. A redução de consultas mede quantidade de acessos, não tempo de resposta. O comportamento em tecnologias além das duas stacks fornecidas não foi comprovado.
 
 ### Disponibilidade e rastreabilidade
 
@@ -416,7 +416,7 @@ cd task-manager-api
 codex '$refactor-arch Execute somente as Fases 1 e 2 neste projeto e aguarde minha aprovação.'
 ```
 
-As aspas simples preservam o `$` literal no shell. O path adotado é `.agents/skills/refactor-arch/`, adaptação ao Codex permitida pelo enunciado. A [documentação oficial de skills](https://learn.chatgpt.com/docs/build-skills), conferida em 03/11/2026, descreve esse diretório e a invocação explícita por `$` ou `/skills` no CLI/IDE. O comando e a documentação não comprovam a descoberta na instalação T3 usada nas sessões anteriores; esse limite permanece registrado. Se a skill não aparecer, confira o diretório atual e a leitura do `SKILL.md` local antes de prosseguir.
+As aspas simples preservam o `$` literal no shell. O path adotado é `.agents/skills/refactor-arch/`, adaptação ao Codex permitida pelo enunciado. A [documentação oficial de skills](https://learn.chatgpt.com/docs/build-skills), conferida em 03/11/2026, descreve esse diretório e a invocação explícita por `$` ou `/skills` no CLI/IDE. Se a skill não aparecer, confira o diretório atual e a leitura do `SKILL.md` local antes de prosseguir.
 
 O checkout entregue já está refatorado: nova auditoria examina o código atual e não deve ser esperada a mesma quantidade de achados históricos. Para observar o estado anterior, consulte as revisões indicadas nos relatórios; qualquer execução do legado deve usar cópia descartável e isolamento comprovado.
 

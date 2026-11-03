@@ -74,6 +74,6 @@
     "No real database migration or reset",
     "Admin SQL intentionally retained behind admin, CSRF and opt-in flag",
     "Legacy migration requires an offline fully plaintext database",
-    "Projects 2/3 and automatic T3 discovery not validated"
+    "Projects 2/3 had not yet been validated"
   ]
 }

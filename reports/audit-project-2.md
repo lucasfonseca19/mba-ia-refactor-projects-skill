@@ -267,6 +267,6 @@ Arquivos: [antes](evidence/project-2-http-before.json), [depois](evidence/projec
 - Reset de senhas legadas fica fora desta API sem login/reset: legado é rejeitado, não autenticado por algoritmo fraco. Custo: dados legados externos exigiriam processo próprio de reset.
 - Pagamentos reais, idempotência e compensação externa não implementados: somente simulador sem rede. Custo: não usar como cobrança de produção.
 - Persistência/migração, carga/DoS e política monetária além da existente não foram validadas. Token compartilhado não é gestão completa de usuários; scrypt usa parâmetros documentados no README, sem benchmark de carga. Banco/fila/cache em memória não constituem arquitetura de produção.
-- Nenhuma alteração necessária na skill foi demonstrada: a mesma cópia orientou Node/Express, com findings fora do catálogo e sem transportar exemplos Flask. Descoberta automática do Codex/T3 não testada. Generalização a outros projetos segue sem comprovação universal.
+- Nenhuma alteração necessária na skill foi demonstrada: a mesma cópia orientou Node/Express, com findings fora do catálogo e sem transportar exemplos Flask. Generalização a outros projetos segue sem comprovação universal.
 - Skill de execução exigiu uma revisão independente final; ela foi feita sem alterações no checkout. As demais atividades foram executadas nesta sessão.
 - Sem push, deploy, cobrança/email real ou execução da issue011. Commit local da issue na branch refactor/issue-010-project-2; hash disponível no histórico que contém este relatório.

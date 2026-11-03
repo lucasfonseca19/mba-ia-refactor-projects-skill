@@ -8,7 +8,7 @@
 - Cobertura:4/4 arquivos Python próprios, 780 linhas físicas; manifestos/README/configuração lidos separadamente. Excluídos ambientes, dependências, banco, artefatos e aplicações vizinhas.
 - Arquitetura: app → Controllers → Models → banco, com SQL direto em app/health; conexão global e inicialização/seed implícitos. Separação parcial real.
 - Alterações documentais anteriores e skill não rastreada preservadas; fontes Python e requirements sem diferenças na retomada.
-- Skill explicitamente invocada nesta sessão; descoberta automática no T3 não comprovada.
+- Skill explicitamente invocada nesta sessão.
 
 ## Resumo
 
@@ -351,6 +351,6 @@ Fase 3:
 
 ### Limites restantes
 
-Resultados delimitados aos cenários descritos; não declaramos zero anti-patterns universalmente. Sem teste de carga, deploy, infraestrutura externa ou migração real. A ferramenta SQL habilitada continua tendo poder administrativo irrestrito e pode contornar invariantes; a política aprovada exige admin confiável, CSRF e opt-in. Migração exige base offline integralmente plaintext; bases mistas não são inferidas automaticamente. Emails duplicados e ausência de reposição automática no cancelamento permanecem contratos legados. Nenhuma prova de descoberta automática no T3, agnosticismo em quarta stack ou execução dos projetos 2/3.
+Resultados delimitados aos cenários descritos; não declaramos zero anti-patterns universalmente. Sem teste de carga, deploy, infraestrutura externa ou migração real. A ferramenta SQL habilitada continua tendo poder administrativo irrestrito e pode contornar invariantes; a política aprovada exige admin confiável, CSRF e opt-in. Migração exige base offline integralmente plaintext; bases mistas não são inferidas automaticamente. Emails duplicados e ausência de reposição automática no cancelamento permanecem contratos legados. Na conclusão desta auditoria, não havia prova de agnosticismo em outra stack ou execução dos projetos 2/3.
 
 Os detalhes de validação e suas limitações estão registrados neste relatório.
